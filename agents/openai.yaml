@@ -1,0 +1,4 @@
+interface:
+  display_name: "安装教程效果"
+  short_description: "用已标记素材制作组合不重复的TikTok安装效果带货视频"
+  default_prompt: "Use $installation-tutorial-effect to tag my footage, avoid repeating prior shot sequences, and prepare a new installation-and-effect TikTok Shop edit for confirmation."
