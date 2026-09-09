@@ -1,7 +1,7 @@
 param(
   [Parameter(Mandatory = $true)][string]$Storyboard,
   [Parameter(Mandatory = $true)][string]$History,
-  [double]$MaxOverlap = 0.70
+  [double]$MaxOverlap = 1.0
 )
 
 $ErrorActionPreference = 'Stop'
@@ -39,7 +39,7 @@ foreach ($edit in $edits) {
   if ($overlap -gt $maxFound) { $maxFound = $overlap }
 }
 
-$passes = (-not $exact) -and ($maxFound -le $MaxOverlap)
+$passes = (-not $exact)
 [pscustomobject]@{
   passes = $passes
   exact_sequence_match = $exact

@@ -29,15 +29,7 @@ Before proposing shots, create or update `material-tags.json` beside the storybo
 
 Read or create `usage-history.json`. Individual sources may be reused, but never reproduce a prior final video with the same source/time-range sequence from beginning to end.
 
-When enough alternatives exist:
-
-- change the opening source or time range;
-- change at least one installation/control shot;
-- change the effect-shot order;
-- change the closing wide shot or time range;
-- keep identical source/time-range overlap with any one prior edit at or below 70%.
-
-If the library is limited, vary time ranges, order, hook copy, pacing, and closing shot. Changing only subtitles over an otherwise identical full sequence is not a new combination.
+Reuse individual shots freely to keep production fast. The only blocking diversity failure is an entire edit whose source files, time ranges, and sequence all exactly match a previously delivered video. Prefer changing one or more of the opening, shot order, time ranges, hook copy, pacing, or closing shot, but do not delay rendering merely to reduce partial overlap.
 
 Run [scripts/check-diversity.ps1](scripts/check-diversity.ps1) against the confirmed storyboard before rendering. After delivery, append the actual sources and time ranges to `usage-history.json`.
 
@@ -61,6 +53,7 @@ Use a user-supplied or commercially cleared track. Trim it to the exact final du
 - When a very bright floodlight or other highlight is visible but the surroundings remain dark, protect the highlight while lifting the shadows and midtones. Start with `brightness=0.07`, `gamma=1.18`, `saturation=1.15`, and `contrast=1.03`; reduce the correction if the lamp clips or the colors look artificial.
 - Prefer a bright, vivid Halloween look with readable red, blue, green, and purple details. Reject or replace severely underexposed shots when correction cannot recover useful detail.
 - Do not add a dark overlay anywhere, including the ending. Do not fade the picture to black; keep the final shot at normal brightness and end on the live video frame. A short audio-only fade is allowed.
+- When the user explicitly prioritizes completion speed, make one basic correction pass on dark footage and do not rerender solely for aesthetic brightness differences.
 
 ## Final QA
 
