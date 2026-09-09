@@ -39,6 +39,8 @@ Run [scripts/check-diversity.ps1](scripts/check-diversity.ps1) against the confi
 - Match the demonstrated control method to the exact SKU.
 - Do not show prices, discounts, coupons, wattage, pack quantity, ratings, waterproof grade, or other claims unless confirmed for that video.
 - For TikTok Shop, use the saved compact CTA layout instead of a large bottom caption. On a `1080×1920` canvas, place `TAP TO SHOP` at approximately `x=60, y=830`, use a bold font around `54 px`, and put a clear orange downward arrow directly below it around `y=920`. Keep the whole CTA group in the left-middle/lower-middle area shown in the user's reference, well above playback controls. Scale these coordinates proportionally for other canvases.
+- Keep the main hook/title in the top safe region (`y=140` for its first line on a `1080×1920` canvas) and leave it visible continuously from the first frame through the final frame. It must not disappear between shots. Add one or two relevant Halloween emoji accents such as `🎃`, `👻`, or `🦇`, and keep those accents visible with the title, using an emoji-capable font when needed.
+- Except for the opening title and the saved CTA, center all other step/effect captions at `y=650` on a `1080×1920` canvas. For two-line copy, use `y=610` and `y=690`. This is the user's preferred middle-upper caption area; do not keep every caption at the top.
 - Crop out or replace unrelated UI, watermarks, downloaded-video text, and unlicensed reference footage.
 
 ## BGM
@@ -63,6 +65,7 @@ In addition to normal `auto-cut` QA, verify:
 - no unwanted price information;
 - no prior full-sequence duplicate;
 - hook and CTA are inside TikTok-safe regions;
+- main hook and its Halloween emoji accent remain visible from start to finish, and all non-title/non-CTA captions use the saved middle-upper position;
 - CTA is compact and raised to the saved left-side position; it must not revert to the previous oversized near-bottom layout;
 - every selected night shot passes a representative-frame brightness check, especially shots containing a bright lamp against a dark environment; colors must remain vivid after HDR-to-SDR conversion, without crushed shadows or clipped light sources;
 - the ending remains a normal-brightness video frame with no black mask, dark overlay, or visual fade-to-black;
